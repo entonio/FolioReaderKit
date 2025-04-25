@@ -13,7 +13,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/ZipArchive/ZipArchive.git", exact: "2.1.1"),
+        .package(url: "https://github.com/ZipArchive/ZipArchive.git", branch: "master"),
         .package(url: "https://github.com/cxa/MenuItemKit.git", branch: "master"),
         .package(url: "https://github.com/entonio/ZFDragableModalTransition.git", branch: "master"),
         .package(url: "https://github.com/tadija/AEXML.git", branch: "master"),
