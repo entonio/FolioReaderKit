@@ -18,7 +18,7 @@ let package = Package(
         .package(url: "https://github.com/entonio/ZFDragableModalTransition.git", branch: "master"),
         .package(url: "https://github.com/tadija/AEXML.git", exact: "4.3.3"),
         .package(url: "https://github.com/ArtSabintsev/FontBlaster.git", exact: "4.1.0"),
-        .package(url: "https://github.com/realm/realm-cocoa.git", exact: "3.17.3")
+        .package(url: "https://github.com/realm/realm-swift.git", from: "10.54.4")
     ],
     targets: [
         .target(
