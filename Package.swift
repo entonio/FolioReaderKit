@@ -24,12 +24,12 @@ let package = Package(
         .target(
             name: "FolioReaderKit",
             dependencies: [
-                "SSZipArchive",
+                "ZipArchive",
                 "MenuItemKit",
                 "ZFDragableModalTransition",
                 "AEXML",
                 "FontBlaster",
-				"RealmSwift"
+				"realm-swift"
             ],
             path: "Source",
             exclude: [],
