@@ -33,7 +33,7 @@ let package = Package(
                 "JSQWebViewController",
                 .product(name: "RealmSwift", package: "realm-cocoa")
             ],
-            path: "Source",
+            path: "Sources",
             publicHeadersPath: "FolioReaderKit",
         )
     ]
