@@ -13,28 +13,35 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/ZipArchive/ZipArchive.git", from: "2.1.0"),
-        .package(url: "https://github.com/cxa/MenuItemKit.git", from: "3.0.0"),
+        .package(url: "https://github.com/ZipArchive/ZipArchive.git", exact: "2.1.1"),
+        .package(url: "https://github.com/cxa/MenuItemKit.git", exact: "3.1.3"),
         .package(url: "https://github.com/entonio/ZFDragableModalTransition.git", branch: "master"),
-        .package(url: "https://github.com/tadija/AEXML.git", from: "4.2.0"),
-        .package(url: "https://github.com/ArtSabintsev/FontBlaster.git", from: "4.0.0"),
-        .package(url: "https://github.com/fantim/JSQWebViewController.git", from: "6.1.0"),
-        .package(url: "https://github.com/realm/realm-cocoa.git", from: "3.1.0")
+        .package(url: "https://github.com/tadija/AEXML.git", exact: "4.3.3"),
+        .package(url: "https://github.com/ArtSabintsev/FontBlaster.git", exact: "4.1.0"),
+        .package(url: "https://github.com/realm/realm-cocoa.git", exact: "3.17.3")
     ],
     targets: [
         .target(
             name: "FolioReaderKit",
             dependencies: [
-                "ZipArchive",
+                "SSZipArchive",
                 "MenuItemKit",
                 "ZFDragableModalTransition",
                 "AEXML",
                 "FontBlaster",
-                "JSQWebViewController",
                 .product(name: "RealmSwift", package: "realm-cocoa")
             ],
-            path: "Sources",
-            publicHeadersPath: "FolioReaderKit",
+            path: "Source",
+            exclude: [],
+            resources: [
+                .process("Source/**/*.{js,css}"),
+                .process("Source/Resources/*.xcassets"),
+                .process("Source/Resources/Fonts/**/*.{otf,ttf}")
+            ],
+            publicHeadersPath: ".",
+            cSettings: [
+                .headerSearchPath("Source")
+            ]
         )
     ]
 )
