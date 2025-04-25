@@ -29,7 +29,7 @@ let package = Package(
                 "ZFDragableModalTransition",
                 "AEXML",
                 "FontBlaster",
-				"realm-swift"
+                .product(name: "RealmSwift", package: "realm-swift")
             ],
             path: "Source",
             exclude: [],
